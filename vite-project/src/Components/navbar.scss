@@ -1,0 +1,71 @@
+@import "../responsive.scss";
+
+nav {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    transition: all 0.4s ease;
+
+    &:hover {
+      scale: 1.05;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .left-navbar {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 20px;
+      }
+
+      span {
+        @include tablet {
+          display: none;
+        }
+
+        @include mobile {
+          display: initial;
+        }
+      }
+    }
+  }
+  .right-navbar {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fcf5f3;
+    height: 100%;
+    a {
+      padding: 12px 24px;
+      margin: 20px;
+    }
+    .register {
+      background-color: #fece51;
+    }
+    .menuIcon {
+      display: none;
+
+      @include mobile {
+        display: inline;
+      }
+    }
+  }
+}
